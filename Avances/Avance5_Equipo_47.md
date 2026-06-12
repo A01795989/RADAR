@@ -18,8 +18,13 @@ Este notebook contiene el desarrollo correspondiente al modelo final del proyect
 
 
 ```python
-!jupyter nbconvert --to markdown "/content/tu_archivo.ipynb"
+!jupyter nbconvert --to markdown "/content/drive/MyDrive/Proyecto Integrador (RADAR)/Notebooks/Avance5_Equipo_47.ipynb"
 ```
+
+    [NbConvertApp] Converting notebook /content/drive/MyDrive/Proyecto Integrador (RADAR)/Notebooks/Avance5_Equipo_47.ipynb to markdown
+    [NbConvertApp] Support files will be in Avance5_Equipo_47_files/
+    [NbConvertApp] Writing 131276 bytes to /content/drive/MyDrive/Proyecto Integrador (RADAR)/Notebooks/Avance5_Equipo_47.md
+
 
 
 ```python
