@@ -18,6 +18,20 @@ Este notebook contiene el desarrollo correspondiente al modelo final del proyect
 
 
 ```python
+!jupyter nbconvert --to markdown "/content/tu_archivo.ipynb"
+```
+
+
+```python
+from google.colab import drive
+drive.mount('/content/drive')
+```
+
+    Mounted at /content/drive
+
+
+
+```python
 from google.colab import drive
 drive.mount('/content/drive', force_remount=True)
 ```
@@ -116,7 +130,7 @@ df_competencia['Precio_anterior'] = df_competencia['Precio_anterior'].astype(flo
 df_competencia['Precio_anterior'].fillna(df_competencia['Precio_actual'], inplace=True)
 ```
 
-    /tmp/ipykernel_1963/644378432.py:4: FutureWarning: A value is trying to be set on a copy of a DataFrame or Series through chained assignment using an inplace method.
+    /tmp/ipykernel_1848/644378432.py:4: FutureWarning: A value is trying to be set on a copy of a DataFrame or Series through chained assignment using an inplace method.
     The behavior will change in pandas 3.0. This inplace method will never work because the intermediate object on which we are setting values always behaves as a copy.
     
     For example, when doing 'df[col].method(value, inplace=True)', try using 'df.method({col: value}, inplace=True)' or df[col] = df[col].method(value) instead, to perform the operation inplace on the original object.
@@ -151,7 +165,7 @@ display(df_retailer.head())
 
 
 
-  <div id="df-d98a499e-189f-42cb-a351-38e5ecdcd808" class="colab-df-container">
+  <div id="df-6341924a-9ee4-4e3f-821b-3ba501259761" class="colab-df-container">
     <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -254,7 +268,7 @@ display(df_retailer.head())
     <div class="colab-df-buttons">
 
   <div class="colab-df-container">
-    <button class="colab-df-convert" onclick="convertToInteractive('df-d98a499e-189f-42cb-a351-38e5ecdcd808')"
+    <button class="colab-df-convert" onclick="convertToInteractive('df-6341924a-9ee4-4e3f-821b-3ba501259761')"
             title="Convert this dataframe to an interactive table."
             style="display:none;">
 
@@ -306,12 +320,12 @@ display(df_retailer.head())
 
     <script>
       const buttonEl =
-        document.querySelector('#df-d98a499e-189f-42cb-a351-38e5ecdcd808 button.colab-df-convert');
+        document.querySelector('#df-6341924a-9ee4-4e3f-821b-3ba501259761 button.colab-df-convert');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
       async function convertToInteractive(key) {
-        const element = document.querySelector('#df-d98a499e-189f-42cb-a351-38e5ecdcd808');
+        const element = document.querySelector('#df-6341924a-9ee4-4e3f-821b-3ba501259761');
         const dataTable =
           await google.colab.kernel.invokeFunction('convertToInteractive',
                                                     [key], {});
@@ -355,7 +369,7 @@ display(df_competencia.head())
 
 
 
-  <div id="df-0dc104a2-f0f2-4500-acd8-cf561b8346e8" class="colab-df-container">
+  <div id="df-25781b0a-592a-4e3e-a725-12175f6ae7f3" class="colab-df-container">
     <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -464,7 +478,7 @@ display(df_competencia.head())
     <div class="colab-df-buttons">
 
   <div class="colab-df-container">
-    <button class="colab-df-convert" onclick="convertToInteractive('df-0dc104a2-f0f2-4500-acd8-cf561b8346e8')"
+    <button class="colab-df-convert" onclick="convertToInteractive('df-25781b0a-592a-4e3e-a725-12175f6ae7f3')"
             title="Convert this dataframe to an interactive table."
             style="display:none;">
 
@@ -516,12 +530,12 @@ display(df_competencia.head())
 
     <script>
       const buttonEl =
-        document.querySelector('#df-0dc104a2-f0f2-4500-acd8-cf561b8346e8 button.colab-df-convert');
+        document.querySelector('#df-25781b0a-592a-4e3e-a725-12175f6ae7f3 button.colab-df-convert');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
       async function convertToInteractive(key) {
-        const element = document.querySelector('#df-0dc104a2-f0f2-4500-acd8-cf561b8346e8');
+        const element = document.querySelector('#df-25781b0a-592a-4e3e-a725-12175f6ae7f3');
         const dataTable =
           await google.colab.kernel.invokeFunction('convertToInteractive',
                                                     [key], {});
@@ -753,7 +767,7 @@ df_retailer[['canonical_input']].head()
 
 
 
-  <div id="df-8e220b67-5d16-4cd4-93f4-67eab57f1caa" class="colab-df-container">
+  <div id="df-b09809e8-0e04-49b4-b966-41b663fbf4ea" class="colab-df-container">
     <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -802,7 +816,7 @@ df_retailer[['canonical_input']].head()
     <div class="colab-df-buttons">
 
   <div class="colab-df-container">
-    <button class="colab-df-convert" onclick="convertToInteractive('df-8e220b67-5d16-4cd4-93f4-67eab57f1caa')"
+    <button class="colab-df-convert" onclick="convertToInteractive('df-b09809e8-0e04-49b4-b966-41b663fbf4ea')"
             title="Convert this dataframe to an interactive table."
             style="display:none;">
 
@@ -854,12 +868,12 @@ df_retailer[['canonical_input']].head()
 
     <script>
       const buttonEl =
-        document.querySelector('#df-8e220b67-5d16-4cd4-93f4-67eab57f1caa button.colab-df-convert');
+        document.querySelector('#df-b09809e8-0e04-49b4-b966-41b663fbf4ea button.colab-df-convert');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
       async function convertToInteractive(key) {
-        const element = document.querySelector('#df-8e220b67-5d16-4cd4-93f4-67eab57f1caa');
+        const element = document.querySelector('#df-b09809e8-0e04-49b4-b966-41b663fbf4ea');
         const dataTable =
           await google.colab.kernel.invokeFunction('convertToInteractive',
                                                     [key], {});
@@ -910,7 +924,7 @@ plt.show()
 
 
 
-  <div id="df-a0bdec14-08f6-439f-bcd2-1f0b4297de72" class="colab-df-container">
+  <div id="df-81bf9f15-48f5-4ff2-bf7f-113e9dc0863b" class="colab-df-container">
     <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -965,7 +979,7 @@ plt.show()
     <div class="colab-df-buttons">
 
   <div class="colab-df-container">
-    <button class="colab-df-convert" onclick="convertToInteractive('df-a0bdec14-08f6-439f-bcd2-1f0b4297de72')"
+    <button class="colab-df-convert" onclick="convertToInteractive('df-81bf9f15-48f5-4ff2-bf7f-113e9dc0863b')"
             title="Convert this dataframe to an interactive table."
             style="display:none;">
 
@@ -1017,12 +1031,12 @@ plt.show()
 
     <script>
       const buttonEl =
-        document.querySelector('#df-a0bdec14-08f6-439f-bcd2-1f0b4297de72 button.colab-df-convert');
+        document.querySelector('#df-81bf9f15-48f5-4ff2-bf7f-113e9dc0863b button.colab-df-convert');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
       async function convertToInteractive(key) {
-        const element = document.querySelector('#df-a0bdec14-08f6-439f-bcd2-1f0b4297de72');
+        const element = document.querySelector('#df-81bf9f15-48f5-4ff2-bf7f-113e9dc0863b');
         const dataTable =
           await google.colab.kernel.invokeFunction('convertToInteractive',
                                                     [key], {});
@@ -1042,7 +1056,7 @@ plt.show()
   </div>
 
 
-  <div id="id_45025f8c-9abc-4fe3-87c7-f7c58cdb9803">
+  <div id="id_708cf7ab-7f49-43cf-a44a-f0628d78de7e">
     <style>
       .colab-df-generate {
         background-color: #E8F0FE;
@@ -1086,7 +1100,7 @@ plt.show()
     <script>
       (() => {
       const buttonEl =
-        document.querySelector('#id_45025f8c-9abc-4fe3-87c7-f7c58cdb9803 button.colab-df-generate');
+        document.querySelector('#id_708cf7ab-7f49-43cf-a44a-f0628d78de7e button.colab-df-generate');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
@@ -1104,7 +1118,7 @@ plt.show()
 
 
     
-![png](Avance5_Equipo_47_files/Avance5_Equipo_47_25_1.png)
+![png](Avance5_Equipo_47_files/Avance5_Equipo_47_27_1.png)
     
 
 
@@ -1134,6 +1148,8 @@ embeddings_competencia = model.encode(df_competencia['canonical_input'].tolist()
     You will be able to reuse this secret in all of your notebooks.
     Please note that authentication is recommended but still optional to access public models or datasets.
       warnings.warn(
+    Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+    WARNING:huggingface_hub.utils._http:Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
 
 
 
@@ -1142,10 +1158,6 @@ embeddings_competencia = model.encode(df_competencia['canonical_input'].tolist()
 
 
     config_sentence_transformers.json:   0%|          | 0.00/122 [00:00<?, ?B/s]
-
-
-    Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
-    WARNING:huggingface_hub.utils._http:Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
 
 
 
@@ -1219,7 +1231,7 @@ plt.show()
 
 
     
-![png](Avance5_Equipo_47_files/Avance5_Equipo_47_30_0.png)
+![png](Avance5_Equipo_47_files/Avance5_Equipo_47_32_0.png)
     
 
 
@@ -1333,12 +1345,12 @@ visualize_semantic_clusters(
  )
 ```
 
-    t-SNE finalizado en 5.20 segundos.
+    t-SNE finalizado en 3.26 segundos.
 
 
 
     
-![png](Avance5_Equipo_47_files/Avance5_Equipo_47_32_1.png)
+![png](Avance5_Equipo_47_files/Avance5_Equipo_47_34_1.png)
     
 
 
@@ -1385,7 +1397,7 @@ for i, j in zip(best_idx[0], best_idx[1]):
 
 
     
-![png](Avance5_Equipo_47_files/Avance5_Equipo_47_35_0.png)
+![png](Avance5_Equipo_47_files/Avance5_Equipo_47_37_0.png)
     
 
 
@@ -1533,7 +1545,7 @@ print(df_comp_scores.groupby('Familia')['best_match_score'].agg(['mean','median'
 
 
     
-![png](Avance5_Equipo_47_files/Avance5_Equipo_47_39_0.png)
+![png](Avance5_Equipo_47_files/Avance5_Equipo_47_41_0.png)
     
 
 
@@ -1652,7 +1664,7 @@ for col in df_ablacion.columns:
 
 
     
-![png](Avance5_Equipo_47_files/Avance5_Equipo_47_42_0.png)
+![png](Avance5_Equipo_47_files/Avance5_Equipo_47_44_0.png)
     
 
 
@@ -1911,7 +1923,7 @@ print(f"Umbral actual seleccionado (0.70) {'está cerca del punto de inflexión'
 
 
     
-![png](Avance5_Equipo_47_files/Avance5_Equipo_47_49_0.png)
+![png](Avance5_Equipo_47_files/Avance5_Equipo_47_51_0.png)
     
 
 
@@ -2021,7 +2033,7 @@ plt.tight_layout()
 plt.show()
 ```
 
-    /tmp/ipykernel_1963/789032500.py:40: DeprecationWarning: DataFrameGroupBy.apply operated on the grouping columns. This behavior is deprecated, and in a future version of pandas the grouping columns will be excluded from the operation. Either pass `include_groups=False` to exclude the groupings or explicitly select the grouping columns after groupby to silence this warning.
+    /tmp/ipykernel_1848/789032500.py:40: DeprecationWarning: DataFrameGroupBy.apply operated on the grouping columns. This behavior is deprecated, and in a future version of pandas the grouping columns will be excluded from the operation. Either pass `include_groups=False` to exclude the groupings or explicitly select the grouping columns after groupby to silence this warning.
       estabilidad_familia = df_boot.groupby('familia_base').apply(
 
 
@@ -2041,7 +2053,7 @@ plt.show()
 
 
     
-![png](Avance5_Equipo_47_files/Avance5_Equipo_47_51_2.png)
+![png](Avance5_Equipo_47_files/Avance5_Equipo_47_53_2.png)
     
 
 
@@ -2143,7 +2155,7 @@ df_val1[['Tienda', 'canonical_input', 'Familia', 'score_similitud', 'Validacion'
 
 
 
-  <div id="df-82834f4b-c55a-49ca-aac9-05cd9f591a27" class="colab-df-container">
+  <div id="df-1a2146f9-ce71-4b57-9bbf-ac6a25cce4c4" class="colab-df-container">
     <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -2174,47 +2186,47 @@ df_val1[['Tienda', 'canonical_input', 'Familia', 'score_similitud', 'Validacion'
     <tr>
       <th>0</th>
       <td>Isadora</td>
-      <td>de hombro reversible isadora multicolor</td>
-      <td>DE HOMBRO</td>
-      <td>0.697400</td>
-      <td></td>
-      <td></td>
+      <td>bandolera special price isadora multicolor</td>
+      <td>CRUZADA</td>
+      <td>0.676391</td>
+      <td>S</td>
+      <td>NaN</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>Suburbia</td>
-      <td>set cosmetiquera 2 piezas para mujer generica ...</td>
-      <td>NOVEDAD</td>
-      <td>0.678982</td>
-      <td></td>
-      <td></td>
+      <td>Isadora</td>
+      <td>bandolera special price isadora multicolor</td>
+      <td>CRUZADA</td>
+      <td>0.676391</td>
+      <td>S</td>
+      <td>NaN</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>El Palacio de Hierro</td>
-      <td>michael kors michael kors multicolor</td>
-      <td>NOVEDAD</td>
-      <td>0.675216</td>
-      <td></td>
-      <td></td>
+      <td>Liverpool</td>
+      <td>bolsa bandolera audree para mujer tous azul</td>
+      <td>CRUZADA</td>
+      <td>0.808197</td>
+      <td>S</td>
+      <td>NaN</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>Suburbia</td>
-      <td>cartera para mujer fana rojo</td>
-      <td>NOVEDAD</td>
-      <td>0.681378</td>
-      <td></td>
-      <td></td>
+      <td>Liverpool</td>
+      <td>bolsa bandolera audree para mujer tous negro</td>
+      <td>CRUZADA</td>
+      <td>0.900325</td>
+      <td>S</td>
+      <td>NaN</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>Isadora</td>
-      <td>cartera efecto trenzado isadora multicolor</td>
-      <td>NOVEDAD</td>
-      <td>0.617345</td>
-      <td></td>
-      <td></td>
+      <td>Liverpool</td>
+      <td>bolsa bandolera de piel para mujer adolfo domi...</td>
+      <td>CRUZADA</td>
+      <td>0.855770</td>
+      <td>S</td>
+      <td>NaN</td>
     </tr>
     <tr>
       <th>...</th>
@@ -2227,48 +2239,48 @@ df_val1[['Tienda', 'canonical_input', 'Familia', 'score_similitud', 'Validacion'
     </tr>
     <tr>
       <th>355</th>
-      <td>El Palacio de Hierro</td>
-      <td>bolsa de hombro negro le pliage liso mujer lon...</td>
-      <td>DE HOMBRO</td>
-      <td>0.862981</td>
-      <td></td>
-      <td></td>
+      <td>Isadora</td>
+      <td>tarjetero con cierre isadora multicolor</td>
+      <td>CRUZADA</td>
+      <td>0.723962</td>
+      <td>N</td>
+      <td>NOVEDAD</td>
     </tr>
     <tr>
       <th>356</th>
-      <td>Liverpool</td>
-      <td>bolsa de hombro para mujer olimba azul cafÃ© n...</td>
-      <td>DE HOMBRO</td>
-      <td>0.867082</td>
-      <td></td>
-      <td></td>
+      <td>Suburbia</td>
+      <td>tarjetero de cuero fashion and style unisex li...</td>
+      <td>NOVEDAD</td>
+      <td>0.664261</td>
+      <td>S</td>
+      <td>NaN</td>
     </tr>
     <tr>
       <th>357</th>
-      <td>Liverpool</td>
-      <td>bolsa de mano meridian ii para mujer guess negro</td>
-      <td>DE MANO</td>
-      <td>0.851311</td>
-      <td></td>
-      <td></td>
+      <td>El Palacio de Hierro</td>
+      <td>tarjetero en piel café le pliage xtra liso muj...</td>
+      <td>CRUZADA</td>
+      <td>0.783238</td>
+      <td>N</td>
+      <td>NOVEDAD</td>
     </tr>
     <tr>
       <th>358</th>
       <td>El Palacio de Hierro</td>
-      <td>bolsa de hombro rosa btorresc con animal skin ...</td>
-      <td>DE HOMBRO</td>
-      <td>0.863182</td>
-      <td></td>
-      <td></td>
+      <td>tarjetero textura brillo print bimba logo amar...</td>
+      <td>MOCHILA</td>
+      <td>0.727447</td>
+      <td>N</td>
+      <td>NOVEDAD</td>
     </tr>
     <tr>
       <th>359</th>
-      <td>Suburbia</td>
-      <td>bolsa de hombro para mujer henney bear multicolor</td>
-      <td>DE HOMBRO</td>
-      <td>0.866925</td>
-      <td></td>
-      <td></td>
+      <td>Lululemon</td>
+      <td>vestido corto bolsa city essentials 1l lululem...</td>
+      <td>NOVEDAD</td>
+      <td>0.664422</td>
+      <td>S</td>
+      <td>NaN</td>
     </tr>
   </tbody>
 </table>
@@ -2277,7 +2289,7 @@ df_val1[['Tienda', 'canonical_input', 'Familia', 'score_similitud', 'Validacion'
     <div class="colab-df-buttons">
 
   <div class="colab-df-container">
-    <button class="colab-df-convert" onclick="convertToInteractive('df-82834f4b-c55a-49ca-aac9-05cd9f591a27')"
+    <button class="colab-df-convert" onclick="convertToInteractive('df-1a2146f9-ce71-4b57-9bbf-ac6a25cce4c4')"
             title="Convert this dataframe to an interactive table."
             style="display:none;">
 
@@ -2329,12 +2341,12 @@ df_val1[['Tienda', 'canonical_input', 'Familia', 'score_similitud', 'Validacion'
 
     <script>
       const buttonEl =
-        document.querySelector('#df-82834f4b-c55a-49ca-aac9-05cd9f591a27 button.colab-df-convert');
+        document.querySelector('#df-1a2146f9-ce71-4b57-9bbf-ac6a25cce4c4 button.colab-df-convert');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
       async function convertToInteractive(key) {
-        const element = document.querySelector('#df-82834f4b-c55a-49ca-aac9-05cd9f591a27');
+        const element = document.querySelector('#df-1a2146f9-ce71-4b57-9bbf-ac6a25cce4c4');
         const dataTable =
           await google.colab.kernel.invokeFunction('convertToInteractive',
                                                     [key], {});
@@ -2373,8 +2385,8 @@ print(f"Porcentaje de error: {error_percentage:.2f}%")
 ```
 
     Total de la muestra: 360
-    Registros incorrectos (N): 0
-    Porcentaje de error: 0.00%
+    Registros incorrectos (N): 26
+    Porcentaje de error: 7.22%
 
 
 ## Métricas de Evaluación — Validación Manual y Matriz de Confusión
@@ -2497,9 +2509,62 @@ else:
         print("   una vez completada la auditoría con la familia real para los registros incorrectos.")
 ```
 
-      El archivo de auditoría no tiene validaciones completadas.
-       Llena las columnas 'Validacion' (S/N) y 'Familia_correcta' antes de ejecutar esta celda.
-       Los resultados numéricos del análisis se generarán al volver a correr el notebook.
+    ==================================================
+      Resultados de la Auditoría Manual — RADAR 1.0
+    ==================================================
+      Total auditado:   360
+      Aciertos (S):     334   (92.8%)
+      Errores  (N):     26   (7.2%)
+      Efectividad:      92.8%
+      Desempeño mínimo: 95.0%  (AQL 2.5%, ISO 2859-1)
+      Dictamen:         RECHAZADO — modelo requiere ajustes
+    ==================================================
+    
+    Análisis de errores por Familia predicha:
+                   Total  Errores  Tasa de error (%)
+    Familia                                         
+    CLUTCH FIESTA      2        2              100.0
+    MOCHILA           30        7               23.3
+    CRUZADA           95        8                8.4
+    DE MANO           52        4                7.7
+    DE HOMBRO        134        5                3.7
+    NOVEDAD           47        0                0.0
+
+
+    /tmp/ipykernel_1848/4199125611.py:57: FutureWarning: 
+    
+    Passing `palette` without assigning `hue` is deprecated and will be removed in v0.14.0. Assign the `x` variable to `hue` and set `legend=False` for the same effect.
+    
+      sns.boxplot(
+
+
+
+    
+![png](Avance5_Equipo_47_files/Avance5_Equipo_47_66_2.png)
+    
+
+
+
+    
+![png](Avance5_Equipo_47_files/Avance5_Equipo_47_66_3.png)
+    
+
+
+    
+    Reporte de clasificación por familia:
+                   precision    recall  f1-score   support
+    
+    CLUTCH FIESTA       0.00      0.00      0.00         0
+          CRUZADA       0.92      1.00      0.96        87
+        DE HOMBRO       0.96      1.00      0.98       129
+          DE MANO       0.92      1.00      0.96        48
+          MOCHILA       0.77      1.00      0.87        23
+          NOVEDAD       1.00      0.64      0.78        73
+    
+         accuracy                           0.93       360
+        macro avg       0.76      0.77      0.76       360
+     weighted avg       0.94      0.93      0.92       360
+    
 
 
 
@@ -2550,8 +2615,8 @@ for nombre, cumple in checks:
     ==============================================================
       Métrica                                 Resultado   Mínimo
       ------------------------------------------------------------
-      Efectividad en auditoría manual            100.0%    80.0%
-      Errores auditados (límite AQL: 14)              0     ≤ 14
+      Efectividad en auditoría manual             92.8%    80.0%
+      Errores auditados (límite AQL: 14)             26     ≤ 14
       Score medio de similitud coseno            0.8137    >0.60
       Cobertura (% con familia asignada)          90.8%     >50%
       % clasificado como NOVEDAD                  10.0%     <40%
@@ -2634,7 +2699,7 @@ plt.show()
 
 
     
-![png](Avance5_Equipo_47_files/Avance5_Equipo_47_67_1.png)
+![png](Avance5_Equipo_47_files/Avance5_Equipo_47_69_1.png)
     
 
 
@@ -2682,7 +2747,7 @@ print(f"  {familias_unicas[idx_max[0]]} ↔ {familias_unicas[idx_max[1]]}: {sim_
 
 
     
-![png](Avance5_Equipo_47_files/Avance5_Equipo_47_68_0.png)
+![png](Avance5_Equipo_47_files/Avance5_Equipo_47_70_0.png)
     
 
 
@@ -2850,7 +2915,7 @@ plt.show()
 
 
     
-![png](Avance5_Equipo_47_files/Avance5_Equipo_47_71_1.png)
+![png](Avance5_Equipo_47_files/Avance5_Equipo_47_73_1.png)
     
 
 
@@ -2919,7 +2984,7 @@ plt.show()
 
 
     
-![png](Avance5_Equipo_47_files/Avance5_Equipo_47_72_1.png)
+![png](Avance5_Equipo_47_files/Avance5_Equipo_47_74_1.png)
     
 
 
@@ -3062,7 +3127,7 @@ df_retailer.head(1)
 
 
 
-  <div id="df-0195b17d-49d7-4df9-9b8e-96fbe18ac9a2" class="colab-df-container">
+  <div id="df-9dd7492c-b3c1-4062-8f0d-2cde4812dfaa" class="colab-df-container">
     <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -3115,7 +3180,7 @@ df_retailer.head(1)
     <div class="colab-df-buttons">
 
   <div class="colab-df-container">
-    <button class="colab-df-convert" onclick="convertToInteractive('df-0195b17d-49d7-4df9-9b8e-96fbe18ac9a2')"
+    <button class="colab-df-convert" onclick="convertToInteractive('df-9dd7492c-b3c1-4062-8f0d-2cde4812dfaa')"
             title="Convert this dataframe to an interactive table."
             style="display:none;">
 
@@ -3167,12 +3232,12 @@ df_retailer.head(1)
 
     <script>
       const buttonEl =
-        document.querySelector('#df-0195b17d-49d7-4df9-9b8e-96fbe18ac9a2 button.colab-df-convert');
+        document.querySelector('#df-9dd7492c-b3c1-4062-8f0d-2cde4812dfaa button.colab-df-convert');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
       async function convertToInteractive(key) {
-        const element = document.querySelector('#df-0195b17d-49d7-4df9-9b8e-96fbe18ac9a2');
+        const element = document.querySelector('#df-9dd7492c-b3c1-4062-8f0d-2cde4812dfaa');
         const dataTable =
           await google.colab.kernel.invokeFunction('convertToInteractive',
                                                     [key], {});
@@ -3207,7 +3272,7 @@ df_competencia.head(1)
 
 
 
-  <div id="df-bb6cd9bb-2686-4506-90dc-77eb8af569ce" class="colab-df-container">
+  <div id="df-6586e2ed-ae30-42eb-9c13-85d801b2c037" class="colab-df-container">
     <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -3274,7 +3339,7 @@ df_competencia.head(1)
     <div class="colab-df-buttons">
 
   <div class="colab-df-container">
-    <button class="colab-df-convert" onclick="convertToInteractive('df-bb6cd9bb-2686-4506-90dc-77eb8af569ce')"
+    <button class="colab-df-convert" onclick="convertToInteractive('df-6586e2ed-ae30-42eb-9c13-85d801b2c037')"
             title="Convert this dataframe to an interactive table."
             style="display:none;">
 
@@ -3326,12 +3391,12 @@ df_competencia.head(1)
 
     <script>
       const buttonEl =
-        document.querySelector('#df-bb6cd9bb-2686-4506-90dc-77eb8af569ce button.colab-df-convert');
+        document.querySelector('#df-6586e2ed-ae30-42eb-9c13-85d801b2c037 button.colab-df-convert');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
       async function convertToInteractive(key) {
-        const element = document.querySelector('#df-bb6cd9bb-2686-4506-90dc-77eb8af569ce');
+        const element = document.querySelector('#df-6586e2ed-ae30-42eb-9c13-85d801b2c037');
         const dataTable =
           await google.colab.kernel.invokeFunction('convertToInteractive',
                                                     [key], {});
@@ -3368,7 +3433,7 @@ df_tableau.tail(1)
 
 
 
-  <div id="df-d2b6a13f-1233-43ba-9b9e-5501e2c08e65" class="colab-df-container">
+  <div id="df-d8f53fdd-2f59-445b-8741-80b4cb6fff3e" class="colab-df-container">
     <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -3425,7 +3490,7 @@ df_tableau.tail(1)
     <div class="colab-df-buttons">
 
   <div class="colab-df-container">
-    <button class="colab-df-convert" onclick="convertToInteractive('df-d2b6a13f-1233-43ba-9b9e-5501e2c08e65')"
+    <button class="colab-df-convert" onclick="convertToInteractive('df-d8f53fdd-2f59-445b-8741-80b4cb6fff3e')"
             title="Convert this dataframe to an interactive table."
             style="display:none;">
 
@@ -3477,12 +3542,12 @@ df_tableau.tail(1)
 
     <script>
       const buttonEl =
-        document.querySelector('#df-d2b6a13f-1233-43ba-9b9e-5501e2c08e65 button.colab-df-convert');
+        document.querySelector('#df-d8f53fdd-2f59-445b-8741-80b4cb6fff3e button.colab-df-convert');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
       async function convertToInteractive(key) {
-        const element = document.querySelector('#df-d2b6a13f-1233-43ba-9b9e-5501e2c08e65');
+        const element = document.querySelector('#df-d8f53fdd-2f59-445b-8741-80b4cb6fff3e');
         const dataTable =
           await google.colab.kernel.invokeFunction('convertToInteractive',
                                                     [key], {});
@@ -3518,7 +3583,7 @@ df_tableau.head(1)
 
 
 
-  <div id="df-1ff60a57-a39c-4242-85ef-803cd2b843b7" class="colab-df-container">
+  <div id="df-aa6f7393-8d90-4838-9d93-fbfa779302b6" class="colab-df-container">
     <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -3575,7 +3640,7 @@ df_tableau.head(1)
     <div class="colab-df-buttons">
 
   <div class="colab-df-container">
-    <button class="colab-df-convert" onclick="convertToInteractive('df-1ff60a57-a39c-4242-85ef-803cd2b843b7')"
+    <button class="colab-df-convert" onclick="convertToInteractive('df-aa6f7393-8d90-4838-9d93-fbfa779302b6')"
             title="Convert this dataframe to an interactive table."
             style="display:none;">
 
@@ -3627,12 +3692,12 @@ df_tableau.head(1)
 
     <script>
       const buttonEl =
-        document.querySelector('#df-1ff60a57-a39c-4242-85ef-803cd2b843b7 button.colab-df-convert');
+        document.querySelector('#df-aa6f7393-8d90-4838-9d93-fbfa779302b6 button.colab-df-convert');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
       async function convertToInteractive(key) {
-        const element = document.querySelector('#df-1ff60a57-a39c-4242-85ef-803cd2b843b7');
+        const element = document.querySelector('#df-aa6f7393-8d90-4838-9d93-fbfa779302b6');
         const dataTable =
           await google.colab.kernel.invokeFunction('convertToInteractive',
                                                     [key], {});
